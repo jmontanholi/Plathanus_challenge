@@ -1,18 +1,45 @@
 <section>
   <div class='filterBar'>
-    <button type='button'><i class="far fa-calendar-alt"></i> Dates</button>
-    <button type='button'><i class="fas fa-map-marker-alt"></i> Areas</button>
-    <button type='button filters'><i class="fas fa-sliders-h"></i> sfilters</button>
-    <button type='button'>Sort</button>
-    <button type='button'>Map</button>
+    <button type='button' class='button'><i class="far fa-calendar-alt"></i> Dates</button>
+    <button type='button' class='button'><i class="fas fa-map-marker-alt"></i> Areas</button>
+    <button type='button' class='button filter'><i class="fas fa-sliders-h"></i> Filters</button>
+    <button type='button' class='button'>Sort</button>
+    <button type='button' class='button'>Map</button>
   </div>
-  <% @properties.each do |property| %>
-  <div>
-    <h2><%= property.name %></h2>
-    <%= image_tag(property.photos.first.path) %>
-    <%= image_tag(property.photos.second.path) %>
-    <%= image_tag(property.photos.third.path) %>
+  <div class='mainDiv'>
+    <div class='propertiesDiv'>
+      <% @properties.each do |property| %>
+      <div class='property'>
+        <div class='imgDiv'>
+          <%= image_tag(property.photos.third.path) %>
+          <div class='id'>
+            ID <%= property.id %>
+          </div>
+          <div class='carousel'>
+             <i class="fas fa-circle activeIcon"></i>
+             <i class="fas fa-circle"></i>
+             <i class="fas fa-circle"></i>
+          </div>
+        </div>
+        <div class='propDetails'>
+          <div class='propLocation'>
+            <p>Consolação</p>
+            <h2>R. Fernando de Albuquerque, 86</h2>
+          </div>
+          <div class='propBedrooms'>
+            <p>1 bedroom <i class="fas fa-circle pIcon1"></i> 1 bath</p>
+          </div>
+          <div class='propCost'>
+            <p>R$ 5,990</p>
+            <P>R$ 5,391<span>/mo</span> </P>
+          </div>
+          <p class='availability'>Available <span>4 Jan</span></p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class='googleMap'>
+      <iframe class='google' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.396051108638!2d-46.65931418447159!3d-23.554215167214746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58336d7e58ad%3A0x7fd6798acf8c1b2a!2sR.%20Fernando%20de%20Albuquerque%2C%2086%20-%20Consola%C3%A7%C3%A3o%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001309-030!5e0!3m2!1spt-BR!2sbr!4v1641232472587!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </div>
-    
-  <% end %>
 </section>
