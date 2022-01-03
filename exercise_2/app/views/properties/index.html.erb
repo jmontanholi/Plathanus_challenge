@@ -1,0 +1,18 @@
+<section>
+  <div class='filterBar'>
+    <button type='button'><i class="far fa-calendar-alt"></i> Dates</button>
+    <button type='button'><i class="fas fa-map-marker-alt"></i> Areas</button>
+    <button type='button filters'><i class="fas fa-sliders-h"></i> sfilters</button>
+    <button type='button'>Sort</button>
+    <button type='button'>Map</button>
+  </div>
+  <% @properties.each do |property| %>
+  <div>
+    <h2><%= property.name %></h2>
+    <%= image_tag(property.photos.first.path) %>
+    <%= image_tag(property.photos.second.path) %>
+    <%= image_tag(property.photos.third.path) %>
+  </div>
+    
+  <% end %>
+</section>

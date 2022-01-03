@@ -1,0 +1,99 @@
+// Place all the styles related to the Properties controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 350px;
+  height: 250px;
+}
+
+header {
+  background-color: white;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerP {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  transition: 0.4s all;
+  border-radius: 5px;
+}
+
+.headerP span {
+  color: grey;
+}
+
+.headerP:hover {
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  margin: 0.6rem 0 0 0;
+  padding: 0;
+}
+
+.logo a {
+  color: black;
+  text-decoration: none;
+}
+
+.navBar {
+  margin-right: 2rem;
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  font-size: 13px;
+  color: #3d3d3d;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+
+.link:hover {
+  background-color: rgb(240, 240, 240);
+  padding: 0.2rem 0.8rem 0.2rem 0.8rem;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.pIcon1,
+.pIcon2 {
+  margin: 0.2rem 0.3rem 0 0.3rem;
+  color: grey;
+}
+
+.pIcon1 {
+  font-size: 5px;
+}
+
+.pIcon2 {
+  font-size: 8px;
+}

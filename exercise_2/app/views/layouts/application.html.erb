@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExerciseTwo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/fd0eaf46fd.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class='logo'><a href="#">Exercise 2</a></h1>
+      <p class='headerP'>Explore <i class="fas fa-circle pIcon1"></i> <span>São Paulo </span> <i class="fas fa-chevron-down pIcon2"></i></p>
+      <nav class='navBar'>
+        <a class='link icon' href="#"><i class="fas fa-globe"></i></a>
+        <a class='link' href="#">SUPPORT</a>
+        <a class='link' href="#">SIGN UP</a>
+        <a class='link' href="#"><i class="far fa-user-circle"></i> LOG IN</a>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>
